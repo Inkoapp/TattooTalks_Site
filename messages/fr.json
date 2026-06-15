@@ -1,0 +1,809 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "logout": "Déconnexion",
+    "profile": "Profil",
+    "settings": "Paramètres",
+    "confirm": "Confirmer",
+    "success": "Succès",
+    "error": "Erreur"
+  },
+  "nav": {
+    "home": "Accueil",
+    "dashboard": "Tableau de bord",
+    "rooms": "Salles",
+    "allRooms": "Toutes les salles",
+    "contact": "Contact",
+    "admin": "Admin",
+    "privacy": "Politique de confidentialité"
+  },
+  "auth": {
+    "signIn": "Connexion",
+    "signUp": "Inscription",
+    "email": "Email",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "pseudo": "Pseudo",
+    "bio": "Bio (optionnel)",
+    "country": "Pays",
+    "city": "Ville",
+    "instagram": "Instagram (optionnel)",
+    "alreadyHaveAccount": "Vous avez déjà un compte ?",
+    "noAccount": "Pas encore de compte ?",
+    "acceptPrivacy": "J'accepte la",
+    "privacyPolicy": "politique de confidentialité",
+    "privacyPolicyFull": "et je comprends comment mes données seront utilisées.",
+    "required": "*",
+    "passwordRequirements": "Exigences du mot de passe :",
+    "passwordMin": "8 caractères min.",
+    "passwordUppercase": "1 majuscule",
+    "passwordNumber": "1 chiffre",
+    "passwordSpecial": "1 caractère spécial",
+    "welcomeBack": "Bienvenue !",
+    "joinCommunity": "Rejoignez la communauté des tatoueurs",
+    "connectToCommunity": "Connectez-vous à la communauté des tatoueurs",
+    "loginError": "Email ou mot de passe incorrect",
+    "loginSuccess": "Connexion réussie !",
+    "signupSuccess": "Compte créé avec succès !",
+    "signupError": "Erreur lors de l'inscription",
+    "passwordNotValid": "Mot de passe non conforme aux exigences",
+    "mustAcceptPrivacy": "Vous devez accepter la politique de confidentialité",
+    "accountCreatedLoginError": "Compte créé mais erreur de connexion",
+    "signingUp": "Inscription...",
+    "signingIn": "Connexion...",
+    "selectLanguage": "Choisissez votre langue",
+    "showPassword": "Afficher le mot de passe",
+    "hidePassword": "Masquer le mot de passe",
+    "enterEmail": "Entrez votre email",
+    "enterPassword": "Entrez votre mot de passe"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "subtitle": "Bienvenue sur TattooTalks, la communauté du tatouage",
+    "description": "Explorez les discussions sur tous les aspects du tatouage : styles, techniques, gestion de studio, matériel et bien plus encore.",
+    "feed": "Fil d'actualité",
+    "newPost": "Nouvelle publication",
+    "writePost": "Écrivez votre message...",
+    "selectRoom": "Sélectionnez une salle",
+    "publish": "Publier",
+    "publishing": "Publication...",
+    "addImage": "Ajouter une image",
+    "noPostsYet": "Aucune publication pour le moment",
+    "postPublished": "Publication créée avec succès !",
+    "postError": "Erreur lors de la création de la publication",
+    "selectRoomFirst": "Veuillez sélectionner une salle",
+    "writeContent": "Veuillez écrire un message",
+    "popularTalks": "🔥 Talks populaires",
+    "recentTalks": "⏰ Derniers talks"
+  },
+  "rooms": {
+    "title": "Salles de discussion",
+    "subtitle": "Explorez nos salles thématiques",
+    "description": "Découvrez toutes les discussions sur les thèmes variés du tatouage. Rejoignez des salles dédiées aux artistes et passionnés.",
+    "createRoom": "Créer une salle",
+    "roomName": "Nom de la salle",
+    "roomDescription": "Description",
+    "roomTags": "Tags (séparés par des virgules)",
+    "coverImage": "Image de couverture",
+    "searchRooms": "Rechercher une salle...",
+    "filterByTag": "Filtrer par tag",
+    "allTags": "Tous les tags",
+    "members": "membres",
+    "posts": "publications",
+    "join": "Rejoindre",
+    "leave": "Quitter",
+    "deleteRoom": "Supprimer la salle",
+    "deleteConfirm": "Êtes-vous sûr de vouloir supprimer cette salle ? Tous les posts et discussions seront également supprimés.",
+    "createdBy": "Créée par",
+    "roomCreated": "Salle créée avec succès !",
+    "roomDeleted": "Salle supprimée avec succès",
+    "roomError": "Erreur lors de la récupération des salles",
+    "noRoomsFound": "Aucune salle trouvée",
+    "viewRoom": "Voir la salle",
+    "creating": "Création...",
+    "deleting": "Suppression...",
+    "enterTitle": "Entrez un titre",
+    "enterDescription": "Entrez une description",
+    "enterTags": "Ajoutez des tags séparés par des virgules",
+    "allRooms": "Toutes les salles",
+    "roomsFound": "salles trouvées",
+    "roomFound": "salle trouvée",
+    "searchPlaceholder": "Rechercher une salle par titre ou description...",
+    "filters": "Filtres",
+    "filterByCategory": "Filtrer par catégorie",
+    "selectCategories": "Sélectionnez une ou plusieurs catégories",
+    "clear": "Effacer",
+    "activeFilters": "Filtres actifs :",
+    "noRoomsWithFilters": "Essayez de modifier vos critères de recherche",
+    "firstToCreate": "Soyez le premier à créer une salle de discussion !",
+    "viewAllRooms": "Voir toutes les salles",
+    "by": "par",
+    "view": "Voir",
+    "createNewRoom": "Créer une nouvelle salle de discussion",
+    "createRoomDescription": "Créez un espace de discussion autour d'un sujet lié au tatouage : styles, techniques, matériel, gestion de studio, législation, etc.",
+    "titleLabel": "Titre *",
+    "descriptionLabel": "Description *",
+    "tagsLabel": "Tags (séparés par des virgules)",
+    "titlePlaceholder": "Ex: Hygiène & Stérilisation, Cover-ups, Couleurs...",
+    "descriptionPlaceholder": "Décrivez le sujet de cette salle de discussion",
+    "tagsPlaceholder": "hygiene, materiel, techniques, conseils",
+    "coverImageLabel": "Image de couverture",
+    "addCoverImage": "Ajouter une image de couverture",
+    "creationError": "Erreur lors de la création"
+  },
+  "room": {
+    "loadingRoom": "Chargement de la salle...",
+    "roomNotFound": "Salle introuvable",
+    "backToRooms": "Retour aux salles",
+    "deleteRoom": "Supprimer la salle",
+    "createdBy": "Créée par",
+    "officialRoom": "Salle officielle",
+    "talks": "talks",
+    "talk": "talk",
+    "newDiscussion": "Nouvelle discussion",
+    "shareIdeas": "Partagez vos idées, techniques ou questions...",
+    "photo": "Photo",
+    "publishing": "Publication...",
+    "publish": "Publier",
+    "noDiscussions": "Aucune discussion pour le moment",
+    "beFirstToDiscuss": "Soyez le premier à lancer une discussion dans cette salle !",
+    "addReply": "Ajouter une réponse...",
+    "hide": "Masquer",
+    "show": "Voir",
+    "replies": "réponses",
+    "reply": "réponse",
+    "talkCreated": "Talk créé avec succès !",
+    "talkError": "Erreur lors de la création du talk",
+    "replyAdded": "Réponse ajoutée !",
+    "replyError": "Erreur lors de l'ajout de la réponse",
+    "deleteTalkConfirm": "Êtes-vous sûr de vouloir supprimer ce talk ?",
+    "talkDeleted": "Talk supprimé avec succès",
+    "deleteError": "Erreur lors de la suppression",
+    "searchTalks": "Rechercher dans les discussions...",
+    "filterByTag": "Filtrer par tag",
+    "allTags": "Tous les tags",
+    "talksFound": "discussions trouvées",
+    "talkFound": "discussion trouvée",
+    "noTalksWithFilters": "Aucune discussion trouvée avec ces filtres",
+    "tryDifferentFilters": "Essayez de modifier vos critères de recherche",
+    "postTalk": "Poster un talk",
+    "createTalk": "Créer un TALK",
+    "talkTitle": "Titre du talk",
+    "talkTitlePlaceholder": "Donnez un titre à votre talk...",
+    "talkContent": "Contenu",
+    "talkContentPlaceholder": "Partagez votre histoire, technique ou question...",
+    "talkTags": "Tags",
+    "talkTagsPlaceholder": "Ajoutez des tags (ex: réalisme, couleur, débutant...)",
+    "talkPhoto": "Photo",
+    "addPhoto": "Ajouter une photo",
+    "changePhoto": "Changer la photo",
+    "creating": "Création...",
+    "createTalkDescription": "Partagez vos réflexions, techniques ou questions avec la communauté",
+    "editTalk": "Modifier le TALK",
+    "editTalkDescription": "Modifiez le contenu de votre talk",
+    "saveChanges": "Enregistrer",
+    "saving": "Enregistrement...",
+    "talkUpdated": "Talk modifié avec succès !",
+    "talkUpdateError": "Erreur lors de la modification du talk"
+  },
+  "profile": {
+    "title": "Mon profil",
+    "myProfile": "Mon Profil",
+    "managePersonalInfo": "Gérez vos informations personnelles et votre présence dans la communauté",
+    "editProfile": "Modifier le profil",
+    "avatar": "Photo de profil",
+    "changeAvatar": "Changer la photo",
+    "bio": "Biographie",
+    "updateSuccess": "Profil mis à jour !",
+    "updateError": "Erreur lors de la mise à jour",
+    "notifications": "Notifications",
+    "notificationSettings": "Paramètres de notification",
+    "enableNotifications": "Activer les notifications",
+    "notifyOnReply": "Notifications de réponses",
+    "notifyOnLike": "Notifications de likes",
+    "notifyOnNewPost": "Nouvelles publications dans les salles suivies",
+    "personalInfo": "Informations personnelles",
+    "location": "Localisation",
+    "social": "Réseaux sociaux",
+    "updating": "Mise à jour...",
+    "uploadAvatar": "Télécharger une photo",
+    "noBio": "Aucune biographie",
+    "country": "Pays",
+    "city": "Ville",
+    "notSpecified": "Non renseigné",
+    "noBioSpecified": "Aucune bio renseignée",
+    "avatarUpdated": "Photo de profil mise à jour !",
+    "uploadError": "Erreur lors de l'upload",
+    "edit": "Modifier",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "pseudo": "Pseudo",
+    "viewProfile": "Voir le profil",
+    "notProvided": "Non renseigné",
+    "yourPseudo": "Votre pseudo",
+    "bioPlaceholder": "Parlez de vous, votre spécialité, votre expérience...",
+    "yourCountry": "Votre pays",
+    "yourCity": "Votre ville",
+    "instagramPlaceholder": "https://instagram.com/votre-profil",
+    "saving": "Sauvegarde...",
+    "fetchError": "Erreur lors de la récupération du profil",
+    "imageTypeError": "Le fichier doit être une image",
+    "imageSizeError": "L'image ne doit pas dépasser 5MB",
+    "preferencesTitle": "Préférences de notifications",
+    "customizeAlerts": "Personnalisez vos alertes",
+    "talksCreated": "Talks créés",
+    "commentsCreated": "Commentaires créés"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Une question ? Un problème ?",
+    "description": "N'hésitez pas à nous contacter",
+    "name": "Nom",
+    "subject": "Sujet",
+    "message": "Message",
+    "send": "Envoyer",
+    "sending": "Envoi...",
+    "sendSuccess": "Message envoyé avec succès !",
+    "sendError": "Erreur lors de l'envoi du message",
+    "enterName": "Entrez votre nom",
+    "enterSubject": "Entrez le sujet",
+    "enterMessage": "Entrez votre message",
+    "fillAllFields": "Veuillez remplir tous les champs"
+  },
+  "admin": {
+    "title": "Administration",
+    "messages": "Messages de contact",
+    "users": "Utilisateurs",
+    "rooms": "Salles",
+    "stats": "Statistiques",
+    "pending": "En attente",
+    "processed": "Traités",
+    "markAsRead": "Marquer comme lu",
+    "markAsProcessed": "Marquer comme traité",
+    "from": "De",
+    "date": "Date",
+    "status": "Statut",
+    "noMessages": "Aucun message",
+    "totalMessages": "messages au total",
+    "loadingMessages": "Chargement des messages...",
+    "messagesTitle": "Messages de contact",
+    "noContactMessages": "Aucun message de contact n'a été reçu pour le moment.",
+    "updateSuccess": "Statut mis à jour !",
+    "updateError": "Erreur lors de la mise à jour",
+    "total": "Total",
+    "new": "Nouveaux",
+    "read": "Lus"
+  },
+  "notifications": {
+    "enabled": "Activées",
+    "disabled": "Désactivées",
+    "turnOn": "Activer les notifications",
+    "turnOff": "Désactiver les notifications",
+    "browserNotSupported": "Votre navigateur ne supporte pas les notifications",
+    "permissionDenied": "Permission refusée",
+    "subscribed": "Notifications activées !",
+    "unsubscribed": "Notifications désactivées",
+    "error": "Erreur lors de l'activation des notifications",
+    "notificationPreferences": "Préférences de notifications",
+    "customizeAlerts": "Personnalisez vos alertes",
+    "pushNotifications": "Notifications Push",
+    "enableAllNotifications": "Activer toutes les notifications",
+    "replies": "Réponses",
+    "someoneReplies": "Quelqu'un répond à mes posts",
+    "likes": "Likes",
+    "someoneLikes": "Quelqu'un aime mes posts",
+    "newPosts": "Nouveaux Posts",
+    "newPostsInRooms": "Nouveaux posts dans mes salles",
+    "preferenceUpdated": "Préférence mise à jour",
+    "updateFailed": "Erreur de mise à jour",
+    "loadingPreferences": "Erreur de chargement des préférences"
+  },
+  "post": {
+    "reply": "Répondre",
+    "like": "J'aime",
+    "likes": "J'aime",
+    "replies": "Réponses",
+    "writeReply": "Écrivez votre réponse...",
+    "deletePost": "Supprimer la publication",
+    "deleteReply": "Supprimer la réponse",
+    "deleteConfirm": "Êtes-vous sûr de vouloir supprimer ce post ?",
+    "deleteSuccess": "Post supprimé avec succès",
+    "deleteError": "Erreur lors de la suppression",
+    "posted": "Publié",
+    "edited": "Modifié",
+    "postedIn": "Publié dans",
+    "by": "par",
+    "showReplies": "Afficher les réponses",
+    "hideReplies": "Masquer les réponses",
+    "replyPublished": "Réponse publiée !",
+    "replyError": "Erreur lors de la publication de la réponse"
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "lastUpdate": "Dernière mise à jour",
+    "backToSignup": "Retour à l'inscription",
+    "intro": "Introduction",
+    "dataCollected": "Données collectées",
+    "dataUsage": "Utilisation des données",
+    "dataSecurity": "Protection des données",
+    "yourRights": "Vos droits",
+    "dataSharing": "Partage des données",
+    "cookies": "Cookies",
+    "dataRetention": "Conservation des données"
+  },
+  "time": {
+    "justNow": "À l'instant",
+    "minutesAgo": "il y a {count} minutes",
+    "hoursAgo": "il y a {count} heures",
+    "daysAgo": "il y a {count} jours",
+    "weeksAgo": "il y a {count} semaines",
+    "monthsAgo": "il y a {count} mois",
+    "yearsAgo": "il y a {count} ans"
+  },
+  "roomTitles": {
+    "inspirationsStyles": "Inspirations & Styles",
+    "materielTechniques": "Matériel & Techniques",
+    "portfoliosFeedback": "Portfolios & Feedback",
+    "apprentisFormations": "Apprentis & Formations",
+    "hygieneSecurite": "Hygiène & Sécurité",
+    "guestSpotsCollabs": "Guest Spots & Collaborations",
+    "businessMarketing": "Business & Marketing",
+    "evenementsConventions": "Événements & Conventions",
+    "tattooCafe": "TattooTalks Café",
+    "conseilsClients": "Conseils Clients & Couvertures"
+  },
+  "roomDescriptions": {
+    "inspirationsStyles": "Pour tous les passionnés de tatouage ! Découvrez et partagez des références, des styles variés et des inspirations. Que vous soyez artiste, futur tatoué ou simplement curieux : blackwork, réalisme, japonais, géométrique... Explorez l'univers du tatouage !",
+    "materielTechniques": "Artistes et passionnés : découvrez le matériel professionnel (machines, aiguilles, encres), les techniques de tatouage et les produits de soin. Questions sur votre futur tatouage ? Les experts de la communauté vous répondent !",
+    "portfoliosFeedback": "Artistes, partagez vos créations ! Passionnés et futurs tatoués, donnez votre avis et découvrez des portfolios inspirants. Un espace bienveillant pour échanger, apprendre et s'inspirer ensemble !",
+    "apprentisFormations": "Pour ceux qui veulent apprendre le tatouage : apprentis, mentors et curieux du métier. Échangez conseils, partagez des formations, posez vos questions sur le parcours professionnel et construisez votre réseau !",
+    "hygieneSecurite": "Pour tous : artistes, studios et futurs tatoués. Apprenez les bonnes pratiques d'hygiène, les normes sanitaires, le matériel stérile et comment reconnaître un studio sérieux. Votre sécurité avant tout !",
+    "guestSpotsCollabs": "Studios et artistes : publiez vos disponibilités pour des guest spots. Passionnés : découvrez où vos artistes préférés seront en déplacement et trouvez des opportunités de collaboration créative !",
+    "businessMarketing": "Pour les professionnels et futurs entrepreneurs du tatouage : stratégies de communication, réseaux sociaux, tarification, relation client, visibilité en ligne. Transformez votre passion en activité florissante !",
+    "evenementsConventions": "Pour toute la communauté ! Conventions, salons, festivals et expos de tatouage. Artistes, studios et passionnés : partagez vos expériences, découvrez les prochains événements et rencontrez la communauté !",
+    "tattooCafe": "L'espace détente pour tout le monde ! Artistes, passionnés, curieux : discutez librement de musique, art, culture, lifestyle, cinéma, voyages. Partagez vos anecdotes, vos coups de cœur et détendez-vous !",
+    "conseilsClients": "Pour artistes et futurs tatoués ! Conseils sur la relation tatoueur-client, préparation avant tatouage, soins post-tatouage, retouches, couvertures d'anciens tattoos. Questions et expériences bienvenues !"
+  },
+  "share": {
+    "share": "Partager",
+    "shareThis": "Partager ce talk",
+    "linkCopied": "Lien copié !",
+    "copyError": "Erreur lors de la copie",
+    "copied": "Copié !",
+    "copyLink": "Copier le lien",
+    "instagramCopied": "Lien copié ! Ouvrez Instagram et collez-le dans votre story ou post"
+  },
+  "landing": {
+    "title": "La Communauté",
+    "titleHighlight": "Tatouage",
+    "subtitle": "Connectez-vous avec des tatoueurs et passionnés du monde entier",
+    "description": "Rejoignez la communauté de tatouage la plus dynamique ! Partagez votre passion, découvrez de nouveaux styles et connectez-vous avec des artistes et passionnés du monde entier.",
+    "getStarted": "Commencer",
+    "learnMore": "En savoir plus",
+    "hero": {
+      "title": "Rejoignez TattooTalks",
+      "subtitle1": "1ère communauté 100%",
+      "subtitleHighlight": "tatouage",
+      "subtitle2": "",
+      "cta1": "Téléchargez",
+      "cta2": "l'appli et lancez la discussion!"
+    },
+    "features": {
+      "title": "Pourquoi rejoindre TattooTalks ?",
+      "discussions": {
+        "title": "Discussions Authentiques",
+        "description": "Connectez-vous avec des tatoueurs et passionnés du monde entier"
+      },
+      "inspiration": {
+        "title": "Inspiration Infinie",
+        "description": "Découvrez les derniers styles, techniques et tendances du tatouage"
+      },
+      "community": {
+        "title": "Communauté Active",
+        "description": "Rejoignez une communauté inclusive d'artistes, studios et passionnés"
+      },
+      "global": {
+        "title": "Plateforme Mondiale",
+        "description": "Connectez-vous avec des amateurs de tatouage de tous les coins du monde"
+      }
+    },
+    "rooms": {
+      "title": "Explorez Nos Thèmes de Discussion",
+      "subtitle": "Parcourez le cœur de la communauté",
+      "inspirations": "Inspirations & Styles",
+      "inspirationsDesc": "Partagez et découvrez des styles de tatouage uniques",
+      "equipment": "Matériel & Techniques",
+      "equipmentDesc": "Conseils sur l'équipement professionnel et les techniques",
+      "hygiene": "Hygiène & Sécurité",
+      "hygieneDesc": "Meilleures pratiques et normes de sécurité",
+      "apprentices": "Apprentis & Formations",
+      "apprenticesDesc": "Ressources pour les aspirants tatoueurs",
+      "business": "Business & Marketing",
+      "businessDesc": "Développez votre activité de tatouage",
+      "cafe": "TattooTalks Café",
+      "cafeDesc": "Discussions libres et conviviales"
+    },
+    "stats": {
+      "artists": "Artistes Actifs",
+      "discussions": "Discussions",
+      "countries": "Pays",
+      "members": "Membres de la Communauté"
+    },
+    "cta": {
+      "title": "Prêt à Rejoindre la Communauté ?",
+      "description": "Créez votre compte gratuit pour échanger, partager et créer dès aujourd'hui.",
+      "button": "Rejoindre Maintenant",
+      "appStore": {
+        "subtitle": "Télécharger sur",
+        "title": "App Store"
+      },
+      "playStore": {
+        "subtitle": "TÉLÉCHARGER SUR",
+        "title": "Google Play"
+      }
+    },
+    "footer": {
+      "copyright": "Tous droits réservés."
+    }
+  },
+  "contactPage": {
+    "title": "Contactez-nous",
+    "subtitle": "Entrez en Contact",
+    "description": "Vous avez des questions ou des commentaires ? Nous serions ravis de vous entendre !",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "votre.email@exemple.com",
+      "subject": "Sujet",
+      "subjectPlaceholder": "De quoi s'agit-il ?",
+      "message": "Message",
+      "messagePlaceholder": "Dites-nous en plus...",
+      "send": "Envoyer le Message",
+      "sending": "Envoi en cours..."
+    },
+    "info": {
+      "title": "Temps de Réponse",
+      "description": "Nous répondons généralement sous 24-48 heures pendant les jours ouvrables."
+    },
+    "success": "Message envoyé avec succès ! Nous vous répondrons bientôt.",
+    "error": "Erreur lors de l'envoi du message. Veuillez réessayer."
+  },
+  "privacyPage": {
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "Dernière mise à jour : 27 décembre 2025",
+    "intro": "TattooTalks (« nous », « notre » ou « nos ») s'engage à protéger votre vie privée. Cette Politique de Confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous utilisez notre application mobile.",
+    "sections": {
+      "infoCollect": {
+        "title": "Informations que nous collectons",
+        "personal": "Informations personnelles",
+        "personalDesc": "Lorsque vous créez un compte, nous collectons :",
+        "personalItems": [
+          "Nom d'utilisateur et nom d'affichage (pseudo)",
+          "Adresse e-mail",
+          "Mot de passe (crypté)",
+          "Ville et pays (pour faciliter les connexions locales avec les artistes/passionnés)",
+          "Photo de profil (facultatif)"
+        ],
+        "content": "Informations de contenu",
+        "contentDesc": "Nous collectons le contenu que vous créez et partagez sur la plateforme :",
+        "contentItems": [
+          "Publications (Talks) et discussions",
+          "Commentaires et réponses",
+          "Images et médias que vous téléchargez",
+          "J'aime et interactions"
+        ],
+        "usage": "Informations d'utilisation",
+        "usageDesc": "Nous collectons automatiquement certaines informations sur votre appareil et votre interaction avec l'application :",
+        "usageItems": [
+          "Type d'appareil et système d'exploitation",
+          "Statistiques d'utilisation de l'application",
+          "Adresse IP et données de localisation",
+          "Pages consultées et fonctionnalités utilisées"
+        ]
+      },
+      "dataUse": {
+        "title": "Comment nous utilisons vos informations",
+        "description": "Nous utilisons les informations collectées pour :",
+        "items": [
+          "Fournir et maintenir l'application",
+          "Créer et gérer votre compte",
+          "Activer les fonctionnalités sociales et les interactions",
+          "Vous envoyer des notifications sur l'activité de votre contenu",
+          "Personnaliser votre expérience",
+          "Améliorer nos services",
+          "Répondre à vos demandes et besoins de support",
+          "Détecter et prévenir la fraude ou les abus",
+          "Se conformer aux obligations légales"
+        ]
+      },
+      "dataShare": {
+        "title": "Comment nous partageons vos informations",
+        "visibility": "Paramètres de visibilité et de confidentialité",
+        "visibilityDesc": "Nous offrons des paramètres qui vous permettent de contrôler qui voit votre contenu :",
+        "publicProfiles": "Profils publics :",
+        "publicProfilesDesc": "Par défaut (ou si vous le sélectionnez), votre profil, vos \"Talks\" et votre liste d'abonnés/abonnements sont visibles par tous les utilisateurs de l'application.",
+        "privateProfiles": "Profils privés :",
+        "privateProfilesDesc": "Vous pouvez choisir de rendre votre compte privé. Si vous le faites, vos \"Talks\" et listes d'abonnés ne sont visibles que par les utilisateurs que vous avez approuvés comme abonnés. Vous avez le droit de supprimer des abonnés à tout moment, ce qui révoquera leur accès à votre contenu privé.",
+        "socialSharing": "Partage social et médias",
+        "socialSharingDesc": "Notre application comprend des fonctionnalités qui vous permettent de générer des images de votre contenu (par exemple, \"TalkCards\") pour les partager sur des plateformes de médias sociaux tierces (comme Instagram). Lorsque vous utilisez ces fonctionnalités :",
+        "socialSharingItems": [
+          "Une image est générée localement sur votre appareil.",
+          "Une fois que vous partagez cette image en dehors de TattooTalks, les informations contenues dans l'image deviennent soumises aux politiques de confidentialité de la plateforme tierce sur laquelle vous la partagez."
+        ],
+        "serviceProviders": "Fournisseurs de services",
+        "serviceProvidersDesc": "Nous pouvons partager vos informations avec des fournisseurs de services tiers qui nous aident à exploiter l'application :",
+        "serviceProvidersItems": [
+          "Services d'hébergement cloud (Supabase)",
+          "Fournisseurs de services de messagerie (Resend)",
+          "Fournisseurs d'analytique"
+        ],
+        "legalRequirements": "Exigences légales",
+        "legalRequirementsDesc": "Nous pouvons divulguer vos informations si la loi l'exige ou en réponse à des demandes légales valides."
+      },
+      "dataSecurity": {
+        "title": "Sécurité des données",
+        "description": "Nous mettons en œuvre des mesures de sécurité appropriées pour protéger vos informations :",
+        "items": [
+          "Les mots de passe sont cryptés selon des méthodes standard de l'industrie",
+          "Les données sont transmises via des connexions HTTPS sécurisées",
+          "L'accès aux données personnelles est limité au personnel autorisé",
+          "Audits et mises à jour de sécurité réguliers"
+        ],
+        "disclaimer": "Cependant, aucune méthode de transmission sur Internet n'est sécurisée à 100 %. Bien que nous nous efforcions de protéger vos informations, nous ne pouvons garantir une sécurité absolue."
+      },
+      "dataRights": {
+        "title": "Vos droits sur vos données",
+        "description": "Vous avez le droit de :",
+        "rights": [
+          "Accéder aux informations personnelles que nous détenons sur vous",
+          "Corriger les informations inexactes",
+          "Demander la suppression de votre compte et de vos données",
+          "Vous opposer au traitement de vos informations",
+          "Exporter vos données dans un format portable",
+          "Retirer votre consentement pour certaines activités de traitement",
+          "Contrôler votre confidentialité : Vous pouvez passer d'un profil public à privé à tout moment via les paramètres de votre compte"
+        ],
+        "accountDeletion": "Suppression du compte et des données",
+        "accountDeletionDesc": "Les utilisateurs ont le droit de demander la suppression de leur compte et de toutes les données associées. Cela peut être fait directement dans les paramètres de l'application.",
+        "accountDeletionSteps": "Pour supprimer votre compte :",
+        "accountDeletionStepsList": [
+          "Accédez aux paramètres de votre profil dans l'application",
+          "Sélectionnez \"Supprimer mon compte\"",
+          "Suivez les étapes de confirmation"
+        ],
+        "accountDeletionNote": "Lorsque vous supprimez votre compte, toutes vos données personnelles et votre contenu seront définitivement supprimés de nos serveurs. Cette action est irréversible. Pour d'autres demandes de droits sur les données, veuillez nous contacter à privacy@tattootalks.com",
+        "contact": "Pour exercer ces droits, veuillez nous contacter à"
+      },
+      "dataRetention": {
+        "title": "Conservation des données",
+        "description": "Nous conservons vos informations aussi longtemps que votre compte est actif ou selon les besoins pour fournir des services. Lorsque vous supprimez votre compte, nous supprimerons ou anonymiserons vos informations personnelles dans les 30 jours, sauf si nous sommes tenus de les conserver à des fins légales."
+      },
+      "childrenPrivacy": {
+        "title": "Confidentialité des enfants",
+        "description": "TattooTalks est destiné aux utilisateurs âgés de 18 ans et plus. Nous ne collectons pas sciemment d'informations auprès de personnes de moins de 18 ans. Si nous apprenons que nous avons collecté des informations personnelles auprès d'une personne de moins de 18 ans, nous prendrons des mesures pour supprimer ces informations."
+      },
+      "dataTransfers": {
+        "title": "Transferts internationaux de données",
+        "description": "Vos informations peuvent être transférées et traitées dans des pays autres que le vôtre. Ces pays peuvent avoir des lois de protection des données différentes. En utilisant l'application, vous consentez à ces transferts."
+      },
+      "cookies": {
+        "title": "Cookies et suivi",
+        "description": "Nous utilisons le stockage local et des technologies similaires pour :",
+        "items": [
+          "Mémoriser vos préférences",
+          "Vous garder connecté",
+          "Comprendre comment vous utilisez l'application",
+          "Améliorer nos services"
+        ]
+      },
+      "thirdParty": {
+        "title": "Liens vers des tiers",
+        "description": "L'application peut contenir des liens vers des sites Web ou des services tiers. Nous ne sommes pas responsables des pratiques de confidentialité de ces tiers. Nous vous encourageons à consulter leurs politiques de confidentialité."
+      },
+      "emailComms": {
+        "title": "Communications par e-mail",
+        "description": "Nous pouvons vous envoyer :",
+        "items": [
+          "Des e-mails de bienvenue lorsque vous rejoignez",
+          "Des e-mails de notification sur l'activité de votre contenu",
+          "Des mises à jour et annonces de service",
+          "Des alertes de sécurité"
+        ],
+        "preferences": "Vous pouvez gérer vos préférences d'e-mail dans les paramètres de votre compte."
+      },
+      "policyChanges": {
+        "title": "Modifications de cette politique",
+        "description": "Nous pouvons mettre à jour cette Politique de Confidentialité de temps en temps. Nous vous informerons de tout changement important en publiant la nouvelle politique sur cette page et en mettant à jour la date de \"Dernière mise à jour\". Votre utilisation continue de l'application après les modifications constitue une acceptation de la politique mise à jour."
+      },
+      "contact": {
+        "title": "Nous contacter",
+        "description": "Si vous avez des questions sur cette Politique de Confidentialité ou nos pratiques en matière de données, veuillez nous contacter à :",
+        "email": "E-mail :",
+        "support": "Support :"
+      }
+    }
+  },
+  "termsPage": {
+    "title": "Conditions Générales d'Utilisation",
+    "lastUpdated": "Dernière mise à jour : 27 décembre 2025",
+    "sections": {
+      "acceptance": {
+        "title": "Acceptation des conditions",
+        "description": "En accédant et en utilisant TattooTalks (\"l'Application\"), vous acceptez d'être lié par les termes et dispositions de cet accord. Si vous n'acceptez pas ces Conditions Générales, veuillez ne pas utiliser l'Application."
+      },
+      "service": {
+        "title": "Description du service",
+        "description": "TattooTalks est une plateforme sociale conçue pour que les artistes tatoueurs et les passionnés se connectent, partagent des idées, discutent de techniques et construisent une communauté autour de l'art et de la culture du tatouage."
+      },
+      "accounts": {
+        "title": "Comptes utilisateurs",
+        "items": [
+          "Vous devez avoir au moins 18 ans pour créer un compte",
+          "Vous êtes responsable du maintien de la confidentialité de vos identifiants de compte",
+          "Vous êtes responsable de toutes les activités qui se produisent sous votre compte",
+          "Vous devez fournir des informations exactes et complètes lors de la création de votre compte",
+          "Vous ne pouvez pas utiliser le compte d'un autre utilisateur sans autorisation"
+        ],
+        "privacySettings": "Paramètres de confidentialité :",
+        "privacySettingsDesc": "Vous avez la possibilité de définir votre compte comme \"Privé\". Bien que cela limite la visibilité aux abonnés approuvés, vous reconnaissez que tout le contenu, quels que soient les paramètres de confidentialité, reste soumis à nos politiques de modération de contenu et aux Conditions Générales d'Utilisation."
+      },
+      "userContent": {
+        "title": "Contenu utilisateur et partage social",
+        "items": [
+          "Vous conservez la propriété du contenu que vous publiez sur TattooTalks",
+          "En publiant du contenu, vous accordez à TattooTalks une licence non exclusive pour utiliser, afficher et distribuer votre contenu au sein de l'Application",
+          "Vous êtes seul responsable du contenu que vous publiez",
+          "Vous ne devez pas publier de contenu illégal, offensant ou portant atteinte aux droits d'autrui",
+          "Nous nous réservons le droit de supprimer le contenu qui viole ces conditions"
+        ],
+        "socialSharing": "Partage social :",
+        "socialSharingDesc": "L'Application fournit des fonctionnalités vous permettant d'exporter du contenu (par exemple, \"TalkCards\") vers des services tiers (comme Instagram). En utilisant cette fonctionnalité, vous acceptez d'être seul responsable du contenu que vous partagez sur ces plateformes externes et de vous conformer à leurs conditions d'utilisation respectives."
+      },
+      "prohibited": {
+        "title": "Activités interdites",
+        "description": "Vous acceptez de ne pas :",
+        "items": [
+          "Utiliser l'Application à des fins illégales",
+          "Harceler, abuser ou nuire à d'autres utilisateurs",
+          "Publier du spam ou de la publicité non sollicitée",
+          "Usurper l'identité d'autrui ou fournir de fausses informations",
+          "Tenter d'obtenir un accès non autorisé à l'Application",
+          "Utiliser des systèmes automatisés pour accéder à l'Application sans autorisation",
+          "Publier du contenu contenant des virus ou du code malveillant"
+        ]
+      },
+      "intellectualProperty": {
+        "title": "Propriété intellectuelle",
+        "description": "L'Application et son contenu original, ses fonctionnalités et ses fonctions appartiennent à TattooTalks et sont protégés par les lois internationales sur les droits d'auteur, les marques et autres propriétés intellectuelles."
+      },
+      "ageRequirements": {
+        "title": "Exigences d'âge",
+        "description": "Compte tenu de la nature du contenu lié au tatouage, les utilisateurs doivent avoir au moins 18 ans pour utiliser cette Application. Nous ne collectons pas sciemment d'informations auprès de personnes de moins de 18 ans."
+      },
+      "moderation": {
+        "title": "Modération du contenu",
+        "description": "Nous nous réservons le droit de surveiller, examiner et supprimer le contenu à notre discrétion. Cela inclut le contenu qui viole ces conditions ou qui est autrement répréhensible, qu'il soit publié sur un profil public ou privé."
+      },
+      "ugcPolicy": {
+        "title": "Politique de contenu généré par les utilisateurs - Tolérance zéro pour le contenu répréhensible",
+        "intro": "TattooTalks maintient une politique stricte de tolérance zéro pour le contenu répréhensible, inapproprié ou illégal. En utilisant TattooTalks, vous acceptez explicitement ce qui suit :",
+        "prohibitedContent": "Contenu interdit",
+        "prohibitedContentDesc": "Les utilisateurs ne doivent pas publier, télécharger, partager ou distribuer de contenu qui comprend :",
+        "prohibitedItems": [
+          "Contenu abusif : Contenu qui harcèle, intimide, menace ou rabaisse d'autres utilisateurs",
+          "Contenu haineux : Contenu qui promeut la haine, la discrimination ou la violence contre des individus ou des groupes",
+          "Contenu pornographique ou sexuellement explicite : Tout contenu de nature sexuelle, nudité (à l'exception des œuvres de tatouage artistiques) ou sollicitation sexuelle",
+          "Contenu illégal : Contenu qui viole les lois locales, nationales ou internationales",
+          "Contenu violent : Violence graphique, gore ou contenu qui promeut ou glorifie la violence",
+          "Désinformation : Informations délibérément fausses ou trompeuses",
+          "Spam : Contenu commercial non sollicité ou messages répétitifs",
+          "Violation de droits d'auteur : Contenu qui viole les droits de propriété intellectuelle"
+        ],
+        "enforcement": "Application",
+        "enforcementItems": [
+          "Suppression immédiate : Tout contenu identifié comme répréhensible sera supprimé immédiatement sans préavis",
+          "Suspension ou interdiction permanente du compte : Les utilisateurs qui publient du contenu répréhensible feront face à une suspension immédiate du compte ou à une interdiction permanente de la plateforme",
+          "Pas d'appel pour les violations graves : Les comptes interdits pour avoir publié du contenu illégal, haineux ou pornographique ne seront pas rétablis",
+          "Modération du contenu : En utilisant cette Application, vous reconnaissez et acceptez que tout le contenu généré par les utilisateurs est soumis à modération et examen",
+          "Signalement : Nous encourageons les utilisateurs à signaler le contenu répréhensible via la fonction de signalement intégrée à l'application"
+        ],
+        "userResponsibility": "Responsabilité de l'utilisateur",
+        "userResponsibilityItems": [
+          "Vous êtes seul responsable de vous assurer que votre contenu est conforme à ces politiques",
+          "Vous ne devez pas vous engager avec ou encourager d'autres à publier du contenu interdit",
+          "Les violations mineures répétées entraîneront des conséquences croissantes, y compris la résiliation permanente du compte"
+        ],
+        "moderationMethods": "Méthodes de modération",
+        "moderationMethodsDesc": "TattooTalks utilise une combinaison de :",
+        "moderationMethodsItems": [
+          "Systèmes de signalement par les utilisateurs",
+          "Filtrage automatique du contenu",
+          "Examen manuel par l'équipe de modération",
+          "Application des directives de la communauté"
+        ],
+        "acknowledgment": "En créant un compte et en utilisant TattooTalks, vous confirmez que vous avez lu, compris et acceptez de respecter cette Politique de contenu généré par les utilisateurs."
+      },
+      "privacy": {
+        "title": "Confidentialité",
+        "description": "Votre utilisation de l'Application est également régie par notre Politique de Confidentialité. Veuillez consulter notre Politique de Confidentialité pour comprendre nos pratiques."
+      },
+      "accountDeletion": {
+        "title": "Suppression du compte",
+        "description": "Vous avez le droit de supprimer votre compte à tout moment via les paramètres de profil dans l'Application. Lorsque vous supprimez votre compte :",
+        "items": [
+          "Toutes vos données personnelles seront définitivement supprimées de nos serveurs",
+          "Vos publications, commentaires et autres contenus seront définitivement supprimés",
+          "Cette action est irréversible et ne peut pas être annulée",
+          "Vous devrez créer un nouveau compte si vous souhaitez utiliser l'Application à nouveau"
+        ],
+        "instructions": "Pour supprimer votre compte, allez dans Profil > Supprimer mon compte et suivez les étapes de confirmation."
+      },
+      "termination": {
+        "title": "Résiliation par TattooTalks",
+        "description": "Nous pouvons résilier ou suspendre votre compte et votre accès à l'Application immédiatement, sans préavis, pour une conduite que nous estimons violer ces Conditions ou être préjudiciable à d'autres utilisateurs, à nous ou à des tiers."
+      },
+      "medicalDisclaimer": {
+        "title": "Avertissement médical (Important)",
+        "intro": "TattooTalks n'est pas un prestataire médical. Le contenu disponible sur l'Application, y compris les \"Talks\", les commentaires et les discussions concernant les soins post-tatouage, les processus de guérison ou l'hygiène, est fourni à des fins d'information et d'éducation uniquement et ne constitue pas un conseil médical.",
+        "items": [
+          "Vous devez strictement suivre les instructions de soins post-tatouage fournies par votre tatoueur professionnel",
+          "En cas d'infection, de réaction allergique ou de problème de santé, consultez immédiatement un médecin ou un dermatologue",
+          "TattooTalks décline toute responsabilité pour les blessures ou problèmes de santé résultant de la dépendance au contenu généré par les utilisateurs trouvé sur la plateforme"
+        ]
+      },
+      "warranties": {
+        "title": "Exclusion de garanties",
+        "description": "L'Application est fournie \"telle quelle\" sans garanties d'aucune sorte, expresses ou implicites. Nous ne garantissons pas que l'Application sera ininterrompue, sécurisée ou sans erreur."
+      },
+      "liability": {
+        "title": "Limitation de responsabilité",
+        "description": "En aucun cas TattooTalks ne sera responsable de tout dommage indirect, accessoire, spécial, consécutif ou punitif résultant de votre utilisation de l'Application."
+      },
+      "changes": {
+        "title": "Modifications des conditions",
+        "description": "Nous nous réservons le droit de modifier ces conditions à tout moment. Nous informerons les utilisateurs de tout changement important. Votre utilisation continue de l'Application après les modifications constitue une acceptation des nouvelles conditions."
+      },
+      "governingLaw": {
+        "title": "Loi applicable",
+        "description": "Ces Conditions seront régies et interprétées conformément aux lois de votre juridiction, sans égard à ses dispositions en matière de conflits de lois."
+      },
+      "contact": {
+        "title": "Informations de contact",
+        "description": "Si vous avez des questions concernant ces Conditions Générales, veuillez nous contacter à :",
+        "email": "E-mail :",
+        "emailAddress": "support@tattootalks.com",
+        "copyright": "© 2025 TattooTalks. Tous droits réservés."
+      }
+    }
+  },
+  "whyJoin": {
+    "title": "Pourquoi rejoindre TattooTalks ?",
+    "column1": {
+      "title": "Ciblez vos centres d'intérêt",
+      "description": "Des Guest Spots aux conventions en passant par l'hygiène. Trouvez toutes les infos nécessaires ou posez vos questions par thème spécifique."
+    },
+    "column2": {
+      "title": "Créez votre Talk",
+      "description": "Choisissez un thème et créez un Talk. L'endroit parfait pour débattre, partager des histoires ou poser vos questions."
+    },
+    "column3": {
+      "title": "Artistes, Shops & Passionnés",
+      "description": "Que vous soyez tatoué ou simplement curieux de découvrir la culture, tout le monde est bienvenu dans le cercle."
+    },
+    "column4": {
+      "title": "Boostez votre carrière",
+      "description": "Trouvez votre prochaine opportunité. Du mentorat à la prise de rendez-vous clients, construisez votre parcours ici."
+    }
+  }
+}

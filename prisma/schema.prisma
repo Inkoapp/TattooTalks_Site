@@ -1,0 +1,199 @@
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+    output = "/home/ubuntu/tattootalks/nextjs_space/node_modules/.prisma/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+// NextAuth.js required models
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// TattooTalks specific models
+model User {
+  id               String    @id @default(cuid())
+  email            String    @unique
+  password_hash    String?
+  pseudo           String    @unique
+  bio              String?   @default("")
+  avatar_url       String?
+  country          String?
+  city             String?
+  instagram_link   String?
+  is_admin         Boolean   @default(false)
+  accepted_privacy_policy Boolean @default(false)
+  created_at       DateTime  @default(now())
+  
+  // Notification preferences (Push)
+  notifications_enabled Boolean @default(true)
+  notify_on_reply       Boolean @default(true)
+  notify_on_like        Boolean @default(true)
+  notify_on_new_post    Boolean @default(true)
+  
+  // Email notification preferences
+  email_notifications_enabled Boolean @default(true)
+  email_notify_on_reply       Boolean @default(true)
+  email_notify_on_like        Boolean @default(true)
+  email_notify_on_new_post    Boolean @default(false)
+  
+  // NextAuth relations
+  accounts Account[]
+  sessions Session[]
+  
+  // TattooTalks relations
+  created_rooms    Room[]    @relation("RoomCreator")
+  talks            Talk[]
+  messages         Message[]
+  likes            Like[]
+  push_subscriptions PushSubscription[]
+  notifications    Notification[] @relation("UserNotifications")
+
+  @@map("users")
+}
+
+model Room {
+  id              String   @id @default(cuid())
+  title           String
+  description     String   @db.Text
+  icon            String   @default("💬")
+  tags            String[] @default([])
+  cover_image_url String?
+  creator_id      String?
+  is_fixed        Boolean  @default(false)
+  is_public       Boolean  @default(true)
+  created_at      DateTime @default(now())
+  
+  creator         User?    @relation("RoomCreator", fields: [creator_id], references: [id], onDelete: Cascade)
+  talks           Talk[]
+
+  @@map("rooms")
+}
+
+model Talk {
+  id           String   @id @default(cuid())
+  room_id      String
+  user_id      String
+  title        String   @default("")
+  content      String   @db.Text
+  tags         String[] @default([])
+  image_url    String?
+  likes_count  Int      @default(0)
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+  
+  room         Room     @relation(fields: [room_id], references: [id], onDelete: Cascade)
+  user         User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  messages     Message[]
+  likes        Like[]
+
+  @@map("talks")
+}
+
+model Message {
+  id          String   @id @default(cuid())
+  talk_id     String
+  user_id     String
+  content     String   @db.Text
+  likes_count Int      @default(0)
+  created_at  DateTime @default(now())
+  
+  talk        Talk     @relation(fields: [talk_id], references: [id], onDelete: Cascade)
+  user        User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  likes       Like[]
+
+  @@map("messages")
+}
+
+model Like {
+  id         String   @id @default(cuid())
+  talk_id    String?
+  message_id String?
+  user_id    String
+  created_at DateTime @default(now())
+  
+  talk       Talk?    @relation(fields: [talk_id], references: [id], onDelete: Cascade)
+  message    Message? @relation(fields: [message_id], references: [id], onDelete: Cascade)
+  user       User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@unique([talk_id, user_id])
+  @@unique([message_id, user_id])
+  @@map("likes")
+}
+
+model ContactMessage {
+  id         String   @id @default(cuid())
+  name       String
+  email      String
+  subject    String
+  message    String   @db.Text
+  status     String   @default("nouveau") // nouveau, lu, traité
+  created_at DateTime @default(now())
+
+  @@map("contact_messages")
+}
+
+model PushSubscription {
+  id         String   @id @default(cuid())
+  user_id    String
+  endpoint   String   @unique
+  keys       Json     // Stocke p256dh et auth keys
+  user_agent String?  // Pour identifier l'appareil
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  
+  user       User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@map("push_subscriptions")
+}
+
+model Notification {
+  id         String   @id @default(cuid())
+  user_id    String
+  type       String   // "like", "reply", "new_talk"
+  title      String
+  message    String   @db.Text
+  link       String?  // URL vers le talk ou la discussion
+  is_read    Boolean  @default(false)
+  created_at DateTime @default(now())
+  
+  user       User     @relation("UserNotifications", fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@map("notifications")
+  @@index([user_id, is_read])
+}

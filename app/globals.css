@@ -1,0 +1,351 @@
+/* ========================================
+   TATTOO TALKS - PREMIUM MOLTEN GOLD
+   Design System CSS Variables & Utilities
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Cinzel:wght@400;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Infinite Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+/* ========================================
+   ROOT VARIABLES (CSS Custom Properties)
+   ======================================== */
+
+:root {
+  /* Base Backgrounds */
+  --ink-primary: #121212;
+  --ink-surface: #1A1A1A;
+  --ink-deep: #0D0D0D;
+  
+  /* Molten Gold Palette */
+  --molten-gold: #C5A059;
+  --molten-amber: #CC5500;
+  
+  /* Text Colors */
+  --text-primary: #F5F5F5;
+  --text-secondary: #A3A3A3;
+  --text-muted: #737373;
+  
+  /* Border & Dividers */
+  --border-subtle: #2A2A2A;
+  --border-medium: #3A3A3A;
+  
+  /* Radius */
+  --radius: 0.5rem;
+}
+
+/* ========================================
+   GLOBAL RESET & BASE STYLES
+   ======================================== */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  /* Premium Gallery Atmosphere (No Pure Black) */
+  background: linear-gradient(135deg, var(--ink-deep) 0%, var(--ink-primary) 100%);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* ========================================
+   PREMIUM UTILITY CLASSES
+   ======================================== */
+
+/* Hide scrollbar (Chrome, Safari, Opera) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar (IE, Edge, Firefox) */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ========================================
+   MOLTEN GOLD GRADIENT TEXT
+   (Premium Brand Typography)
+   ======================================== */
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, var(--molten-gold) 0%, var(--molten-amber) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Animated shimmer effect (Premium enhancement) */
+.gold-gradient-text-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--molten-gold) 0%,
+    var(--molten-amber) 25%,
+    var(--molten-gold) 50%,
+    var(--molten-amber) 75%,
+    var(--molten-gold) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ========================================
+   GOLD BORDER GLOW
+   (Premium Buttons & Avatars)
+   ======================================== */
+
+.gold-border-glow {
+  border: 1.5px solid transparent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image: 
+    linear-gradient(var(--ink-surface), var(--ink-surface)),
+    linear-gradient(135deg, var(--molten-gold), var(--molten-amber));
+  box-shadow: 
+    0 0 20px rgba(197, 160, 89, 0.3),
+    inset 0 0 12px rgba(197, 160, 89, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gold-border-glow:hover {
+  box-shadow: 
+    0 0 32px rgba(197, 160, 89, 0.5),
+    0 4px 24px rgba(197, 160, 89, 0.3),
+    inset 0 0 16px rgba(197, 160, 89, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Stronger glow variant */
+.gold-border-glow-strong {
+  border: 2px solid transparent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image: 
+    linear-gradient(var(--ink-surface), var(--ink-surface)),
+    linear-gradient(135deg, var(--molten-gold), var(--molten-amber));
+  box-shadow: 
+    0 0 24px rgba(197, 160, 89, 0.4),
+    0 4px 16px rgba(204, 85, 0, 0.2),
+    inset 0 0 16px rgba(197, 160, 89, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gold-border-glow-strong:hover {
+  box-shadow: 
+    0 0 40px rgba(197, 160, 89, 0.6),
+    0 8px 32px rgba(204, 85, 0, 0.4),
+    inset 0 0 20px rgba(197, 160, 89, 0.2);
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* ========================================
+   PREMIUM CARD EFFECTS
+   ======================================== */
+
+.card-premium {
+  background: var(--ink-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-premium:hover {
+  transform: translateY(-4px);
+  border-color: rgba(197, 160, 89, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 16px rgba(197, 160, 89, 0.15);
+}
+
+/* ========================================
+   ICONOGRAPHY (Outline Style)
+   ======================================== */
+
+.icon-premium {
+  stroke-width: 1.5px;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.icon-premium:hover,
+.icon-premium.active {
+  background: linear-gradient(135deg, var(--molten-gold), var(--molten-amber));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(197, 160, 89, 0.4));
+}
+
+/* ========================================
+   PREMIUM BUTTON BASE
+   ======================================== */
+
+.btn-premium {
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  padding: 1rem 2rem;
+  border-radius: var(--radius);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.btn-premium::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(135deg, var(--molten-gold), var(--molten-amber));
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.btn-premium:hover::before {
+  opacity: 1;
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(197, 160, 89, 0.4));
+  }
+  50% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 16px rgba(197, 160, 89, 0.6));
+  }
+}
+
+/* ========================================
+   LEGACY COMPATIBILITY
+   (Preserve old gradient classes temporarily)
+   ======================================== */
+
+.gradient-text {
+  @apply gold-gradient-text;
+}
+
+.glow-gold {
+  box-shadow: 0 0 20px rgba(197, 160, 89, 0.3);
+}
+
+.glow-gold:hover {
+  box-shadow: 0 0 30px rgba(197, 160, 89, 0.5);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(62, 140, 255, 0.3);
+}
+
+.glow-blue:hover {
+  box-shadow: 0 0 30px rgba(62, 140, 255, 0.5);
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply card-premium;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Infinite Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee:hover,
+.hover\:pause-animation:hover {
+  animation-play-state: paused;
+}
+
+/* ========================================
+   RESPONSIVE PREMIUM UTILITIES
+   ======================================== */
+
+@media (max-width: 768px) {
+  .btn-premium {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.8125rem;
+  }
+}
